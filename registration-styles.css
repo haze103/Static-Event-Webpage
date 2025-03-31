@@ -1,0 +1,231 @@
+/* Reset Styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* global styles */
+* {
+    font-family: "Poppins", sans-serif !important;
+}
+
+:root {
+    --primary-color: #012619;
+    --secondary-color: #49F273;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 20px;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.festival-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.highlight {
+    color: #BF0404;
+}
+
+.home-btn {
+    background: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-btn:hover {
+    background: #0eb735;
+}
+
+/* Registration Section */
+.registration-container {
+    background: #3cff6a;
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.registration-form {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: #12d640;
+    outline: none;
+    box-shadow: 0 0 5px rgba(18, 214, 64, 0.5);
+}
+
+/* Register Button */
+.register-btn {
+    width: 100%;
+    background: darkred;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.register-btn:hover {
+    background: #BF0404;
+    transform: scale(1.05);
+}
+
+.register-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* Footer */
+footer {
+    background: #011810;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.copyright {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .registration-form {
+        max-width: 90%;
+    }
+
+    .register-btn {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subheading {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .registration-container {
+        padding: 30px 10px;
+    }
+
+    .registration-form {
+        padding: 20px;
+    }
+
+    .register-btn {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .home-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
